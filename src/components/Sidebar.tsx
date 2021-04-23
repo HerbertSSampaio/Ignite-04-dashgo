@@ -59,7 +59,6 @@ export function Sidebar() {
                     </Stack>
                 </Box>
             </Stack>
-
         </Box>
     );
 }
