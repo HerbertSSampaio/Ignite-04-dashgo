@@ -13,7 +13,7 @@ export function makeServer() {
             user: Model.extend<Partial<User>>({})
         },
         factories: {
-            user: Factory.extends({
+            user: Factory.extend({
                 name(i: number) {
                     return `User ${i + 1}`
                 },
@@ -29,7 +29,7 @@ export function makeServer() {
             server.createList('user', 200);
         },
         routes() {
-            this.namespace = 'api';
+            this.namespace = 'mira';
             this.timing = 750;
 
             this.get('/users');
@@ -40,5 +40,5 @@ export function makeServer() {
         }
     })
 
-    return server
+    return server;
 }
