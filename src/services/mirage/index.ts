@@ -29,7 +29,7 @@ export function makeServer() {
             server.createList('user', 10);
         },
         routes() {
-            this.namespace = 'mira';
+            this.namespace = 'api';
             this.timing = 750;
 
             this.get('/users');
